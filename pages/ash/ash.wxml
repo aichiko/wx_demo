@@ -1,0 +1,15 @@
+
+<button bindtap="showSheetView" data-tag="{{items[index]}}" wx:for="{{items}}">{{items[index]}}</button>
+
+<!-- sample.wxml -->
+<view class="btn-area">
+  <navigator url="navigate?title=home" hover-class="navigator-hover">跳转到新页面</navigator>
+  <navigator url="redirect?title=next" redirect hover-class="other-navigator-hover">在当前页打开</navigator>
+</view>
+<!-- audio.wxml -->
+<audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+
+<button type="primary" bindtap="audioPlay">播放</button>
+<button type="primary" bindtap="audioPause">暂停</button>
+<button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+<button type="primary" bindtap="audioStart">回到开头</button>

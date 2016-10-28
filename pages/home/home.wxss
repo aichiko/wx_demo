@@ -1,0 +1,9 @@
+view {
+    color: orange;
+}
+
+#taptest {
+    text-align: center;
+    padding: 20px;
+    color: red;
+}

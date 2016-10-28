@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view id="ash" bindtap="clickAction">{{myname}}</view>
+  <button bindtap="changeText"> Change normal data </button>
+</view>
+<import src="home.wxml"/>
+<template is="item" data="{{text: 'forbar'}}"/>

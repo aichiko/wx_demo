@@ -1,0 +1,14 @@
+/*.flex-wrp {
+    flex-direction: row
+}*/
+
+.bc_orange {
+    background-color: orange;
+    height: 100px;
+    width: 200px;
+    text-align: center;
+}
+
+.buttonStyle {
+    width: 200px;
+}
