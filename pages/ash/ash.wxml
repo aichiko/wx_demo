@@ -13,3 +13,31 @@
 <button type="primary" bindtap="audioPause">暂停</button>
 <button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
 <button type="primary" bindtap="audioStart">回到开头</button>
+
+<!--<view class="section tc">
+  <video src ="{{videoSrc}}" controls danmu-btn="true"></video>
+  <view class="btn-area">
+    <button bindtap="bindButtonTap">获取视频</button>
+  </view>
+</view>-->
+
+
+<view class="section tc">
+  <video id="myVideo" src="{{videoSrc}}" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+  <view class="btn-area">
+    <button bindtap="bindButtonTap">获取视频</button>
+    <input bindblur="bindInputBlur"/>
+    <button bindtap="bindSendDanmu">发送弹幕</button>
+  </view>
+</view>
+
+<!--地图标签-->
+<map longitude="113.324520" latitude="23.099994" markers="{{markers}}" covers="{{covers}}" style="width: 375px; height: 200px;"></map>
+
+<!--canvas-->
+<!-- canvas.wxml -->
+<canvas style="width: 300px; height: 200px;" canvas-id="firstCanvas"></canvas>
+<!-- 当使用绝对定位时，文档流后边的 canvas 的显示层级高于前边的 canvas -->
+<canvas style="width: 400px; height: 500px;" canvas-id="secondCanvas"></canvas>
+<!-- 因为 canvas-id 与前一个 canvas 重复，该 canvas 不会显示，并会发送一个错误事件到 AppService -->
+<canvas style="width: 400px; height: 500px;" canvas-id="secondCanvas" binderror="canvasIdErrorCallback"></canvas>

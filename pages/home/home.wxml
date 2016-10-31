@@ -1,10 +1,12 @@
 <!--home.wxml-->
 <view class="2">{{message}}</view>
-<view wx:for="{{array}}">{{item}}</view>
+<view wx:for="{{array}}" wx:key="">{{item}}</view>
+
 <!--wxml-->
 <view wx:if="{{view == 'WEBVIEW'}}"> WEBVIEW </view>
 <view wx:elif="{{view == 'APP'}}"> APP </view>
 <view wx:else="{{view == 'MINA'}}"> MINA </view>
+
 
 <template name="staffName">
   <view>
@@ -17,7 +19,6 @@
 <template is="staffName" data="{{...staffC}}"></template>
 
 <view bindtap="add">{{count}}</view>
-
 
 <block wx:if="{{view == 'MINA'}}">
     <view>1</view>
@@ -32,14 +33,19 @@
   </view>
 </view>-->
 
-<block wx:for="{{[1, 2, 3]}}">
+<block wx:for="{{[1, 2, 3]}}" wx:key="">
   <view> {{index}}: </view>
   <view> {{item}} </view>
 </block>
 
-<view id= "taptest" data-hi="MINA" bindtap="tapName"> click me !</view>
-<view id= "taptest" data-hi="ASH" bindtap="tapName"> click me too !</view>
+<view class= "taptest" data-hi="MINA" bindtap="tapName"> click me !</view>
+<view class= "taptest" data-hi="ASH" bindtap="tapName"> click me too !</view>
+<view class= "taptest" data-hi="API" bindtap="tapName"> 关于API</view>
 <!-- item.wxml -->
 <template name="item">
   <text>{{text}}</text>
 </template>
+
+<view wx:for="{{array}}" wx:key="" wx:for-index="idx" wx:for-item="itemName">
+  {{idx}}: {{itemName}}
+</view>

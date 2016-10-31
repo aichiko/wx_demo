@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/next/next",
-    "pages/ash/ash"
+    "pages/ash/ash",
+    "pages/API/api_01"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -38,9 +38,13 @@ Page({
       wx.navigateTo({
         url: '../next/next'
       })  
-    }else {
+    }else if(event.currentTarget.dataset.hi == 'ASH') {
       wx.navigateTo({
         url: '../ash/ash'
+      }) 
+    }else if(event.currentTarget.dataset.hi == 'API') {
+      wx.navigateTo({
+        url: '../API/api_01'
       }) 
     }
   }
